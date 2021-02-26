@@ -27,7 +27,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          file: ./Dockerfile
           push: true
           tags: ghcr.io/vafanassieff/website:latest
 
