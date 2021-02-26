@@ -1,5 +1,3 @@
-/* eslint-disable vue/max-attributes-per-line */\
-
 <template>
   <div class="flex flex-col justify-center items-center h-full">
     <h1 class="text-6xl">Victor AFANASSIEFF</h1>
