@@ -1,18 +1,18 @@
-FROM node:14.15.0-alpine3.12 as builder
+FROM node:16.13.2-alpine3.14 as builder
 
 WORKDIR /usr/src
 
-COPY package.json yarn.lock ./
+COPY package.json pnpm-lock.yaml ./
 
-RUN yarn install
+RUN npm install -g pnpm && \
+    pnpm config set store-dir .pnpm-store && \
+    pnpm install --frozen-lockfile --ignore-scripts
 
 COPY . .
 
-RUN yarn build
+RUN pnpm build
 
 FROM nginx:stable-alpine
-
-WORKDIR /
 
 COPY --from=builder /usr/src/dist /usr/share/nginx/html
 

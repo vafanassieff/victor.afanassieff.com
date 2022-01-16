@@ -4,3 +4,5 @@ node_modules
 dist
 LICENSE
 Dockerfile
+.vscode
+.github

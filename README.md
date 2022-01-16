@@ -1,3 +1,3 @@
 # victor.afanassieff.com
 
-My website with Vue 3, Vite 2, Tailwind 2
+My website with Vue 3, Vite , Tailwind 3

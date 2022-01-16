@@ -1,9 +1,6 @@
 module.exports = {
-  purge: {
-    enabled: process.env.NODE_ENV === 'production',
-    content: ['./public/**/*.html', './src/**/*.vue', './src/**/*.css'],
-  },
-  darkMode: false, // or 'media' or 'class'
+  content: ['./public/**/*.html', './src/**/*.vue', './src/**/*.css'],
+  darkMode: 'media',
   theme: {
     extend: {},
   },
